@@ -1,7 +1,7 @@
-package ru.gb.lsn3;
+package ru.gb.lsn4;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 
 /** Класс Employee
  *
@@ -17,9 +17,9 @@ public class Employee {
  LocalDate birthDate;
  int salary;
  int birth;
-
+ Genders gender;
          public Employee(String name, String midName, String surName,
- String phone, String position, int salary, int birth, LocalDate  birthDate) {
+ String phone, String position, int salary, int birth, LocalDate  birthDate, Genders gender) {
              this.name = name;
              this.midName = midName;
              this.surName = surName;
@@ -28,9 +28,18 @@ public class Employee {
              this.salary = salary;
              this.birth = birth;
              this.birthDate = birthDate;
+             this.gender = gender;
              }
 
-         public String getName() {
+    public Genders getGender() {
+        return gender;
+    }
+
+    public void setGender(Genders gender) {
+        this.gender = gender;
+    }
+
+    public String getName() {
 
              return name;
              }
